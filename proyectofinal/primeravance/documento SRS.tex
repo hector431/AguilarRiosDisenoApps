@@ -1,0 +1,215 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{titling}
+\usepackage{geometry}
+\usepackage{array}
+\renewcommand*\familydefault{\sfdefault} 
+\usepackage{ragged2e}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\title{Documento SRS "Gestion y Renta de Lockers"}
+\author{}
+\date{\today}
+
+% Ajustar márgenes
+\geometry{
+  top=2cm,
+  bottom=2cm,
+  left=2cm,
+  right=2cm
+}
+
+\begin{document}
+\maketitle
+
+\section{Introducción}
+La presente propuesta tiene como objetivo desarrollar una aplicación móvil para la gestión y renta de lockers. La aplicación busca mejorar la eficacia en la administración de lockers, permitiendo a los usuarios realizar reservas de manera sencilla y eficiente.
+
+\section{Propósito}
+La aplicación tiene como propósito proporcionar a los usuarios y administradores una plataforma intuitiva y accesible para la gestión y renta de lockers. Permitirá a los usuarios buscar, reservar y liberar lockers, así como proporcionar información detallada sobre la disponibilidad, precios y características de cada locker.
+
+\section{Ámbito del Sistema}
+Nombre del sistema: LockerApp
+
+El ámbito del sistema abarca:
+\begin{itemize}
+    \item Registro y autenticación de usuarios.
+    \item Visualización de catálogo de lockers disponibles.
+    \item Reserva y liberación de lockers.
+    \item Información detallada de lockers (precios, tamaños, ubicación).
+    \item Funciones administrativas para la gestión general del sistema.
+\end{itemize}
+
+\section{Descripción General}
+La plataforma de gestión y renta de lockers tiene como objetivo principal proporcionar una solución integral y eficiente para múltiples instituciones que necesiten administrar el uso de lockers. Permitirá a administradores y usuarios realizar tareas relacionadas con la gestión y reserva de lockers de manera rápida y segura.
+
+\section{Perspectiva del Producto}
+La perspectiva del producto se enfoca en proporcionar una interfaz amigable y accesible para los usuarios finales. La plataforma estará diseñada para mejorar la eficacia en la gestión de lockers, permitiendo una experiencia de usuario intuitiva tanto para administradores como para clientes. La aplicación se visualiza como una solución centralizada y versátil para la gestión eficiente de lockers en diversas instituciones.
+
+\section{Funciones del Producto}
+El producto ofrecerá las siguientes funciones clave:
+
+\begin{itemize}
+    \item Registro y autenticación de usuarios (administradores y clientes).
+    \item Visualización de un catálogo de lockers disponibles.
+    \item Reserva de lockers con selección de fecha y hora.
+    \item Información detallada sobre precios, tamaños y ubicación de lockers.
+    \item Guía de seguridad y mantenimiento para los usuarios.
+    \item Catálogo para comentarios y sugerencias con información del remitente.
+    \item Funciones administrativas, incluyendo liberación y eliminación de lockers y  modificación de datos de asignaciones.
+    \item Acceso a historiales de reservas y capacidad de agregar nuevos lockers al sistema.
+\end{itemize}
+
+\section{Requerimientos Funcionales}
+\begin{center}
+\begin{tabular}{|c|l|p{6cm}|}
+    \hline
+    \textbf{Número} & \textbf{Nombre del Requerimiento} & \textbf{Descripción del Requerimiento} \\
+    \hline
+    1 & Registro de Administradores & El sistema debe permitir a los administradores registrarse proporcionando información personal. \\
+    \hline
+    2 & Registro de Usuarios & El sistema debe permitir a los usuarios registrarse proporcionando información personal. \\
+    \hline
+    3 & Inicio de Sesión & Los administradores y usuarios deben poder iniciar sesión en la plataforma. \\
+    \hline
+    4 & Catálogo de Lockers & Debe existir un catálogo de lockers que muestre información detallada sobre cada locker, como tamaño, ubicación y disponibilidad. \\
+    \hline
+    5 & Reserva de Lockers & Los usuarios deben poder reservar un locker disponible y seleccionar la fecha y hora de inicio y finalización de la reserva. \\
+    \hline
+    6 & Tipos de Usuarios & El sistema debe distinguir entre administradores y clientes, con diferentes niveles de acceso y funcionalidades. \\
+    \hline
+    7 & Disponibilidad de Lockers & Los usuarios deben poder verificar la disponibilidad en tiempo real de los lockers. \\
+    \hline
+    8 & Catálogo de Precios y Características & Los usuarios deben poder acceder a un catálogo que muestre los precios de los lockers y sus características. \\
+    \hline
+    9 & Guía de Seguridad y Mantenimiento & Debe haber una sección con una guía detallada sobre la seguridad y el mantenimiento de los lockers. \\
+    \hline
+    10 & Comentarios y Sugerencias & Los usuarios deben poder dejar comentarios y sugerencias relacionadas con el servicio, con información de contacto opcional. \\
+    \hline
+    11 & Liberación y Eliminación de Lockers & Los administradores deben tener la capacidad de liberar lockers al finalizar su uso y eliminar lockers si es necesario. \\
+    \hline
+    12 & Modificación de Datos de Asignación y Precios & Los administradores deben poder modificar los datos de asignación de lockers y ajustar los precios según sea necesario. \\
+    \hline
+    13 & Acceso a Historiales & Los administradores deben poder acceder a los historiales de reservas y usos de lockers para fines de seguimiento y auditoría. \\
+    \hline
+\end{tabular}
+\end{center}
+
+\section{Requerimientos no Funcionales}
+\begin{center}
+\begin{tabular}{|c|l|p{8cm}|}
+    \hline
+    \textbf{Número} & \textbf{Nombre del Requerimiento} & \textbf{Descripción del Requerimiento} \\
+    \hline
+    1 & Seguridad & El sistema debe garantizar la seguridad de los datos de los usuarios y la integridad de la información. \\
+    \hline
+    2 & Rendimiento & La plataforma debe ser rápida y eficiente en la gestión de reservas y actualización de datos. \\
+    \hline
+    3 & Usabilidad & La interfaz de usuario debe ser intuitiva y fácil de usar para administradores y clientes. \\
+    \hline
+    4 & Escalabilidad & El sistema debe ser capaz de manejar un aumento en el número de usuarios y lockers sin degradación significativa del rendimiento. \\
+    \hline
+    5 & Disponibilidad & La plataforma debe estar disponible las 24 horas del día, los 7 días de la semana, con un tiempo de inactividad mínimo planificado. \\
+    \hline
+    6 & Cumplimiento Normativo & El sistema debe cumplir con las regulaciones y leyes de protección de datos y privacidad aplicables. \\
+    \hline
+    7 & Documentación & Debe proporcionarse documentación detallada para usuarios y administradores sobre cómo utilizar el sistema. \\
+    \hline
+    8 & Soporte Técnico & Debe estar disponible un sistema de soporte técnico para resolver problemas y responder preguntas de los usuarios. \\
+    \hline
+    9 & Integración & El sistema debe ser capaz de integrarse con otros sistemas de gestión si es necesario. \\
+    \hline
+\end{tabular}
+\end{center}
+
+\section{Diagramas}
+\subsection{Diagrama de Casos de Uso}
+\begin{figure}[H]
+    \centering
+     \includegraphics[width=0.8\textwidth, height=0.8\textheight]{/home/alma/Documentos/diseñoApp/CasosDeUso.png}
+    \caption{imagen del diagrama de casos de uso}
+    \label{fig:etiqueta}
+\end{figure}
+
+\subsection{Diagrama de Secuencia}
+\begin{figure}[H]
+    \centering
+     \includegraphics[width=0.8\textwidth, height=0.8\textheight]{/home/alma/Documentos/diseñoApp/Dsecuencia.png}
+    \caption{imagen del diagrama de secuencia}
+    \label{fig:etiqueta}
+\end{figure}
+
+\subsection{Diagrama de Transacion de Estados}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth, height=0.5\textheight]{/home/alma/Documentos/diseñoApp/DtransicionEstados.png}
+    \caption{imagen del diagrama de transicion de estado}
+    \label{fig:etiqueta}
+\end{figure}
+
+\subsection{Diagrama de Estados}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth, height=0.4\textheight]{/home/alma/Documentos/diseñoApp/Destados.png}
+    \caption{imagen del diagrama de estados}
+    \label{fig:etiqueta}
+\end{figure}
+
+\subsection{Diagrama de Clases}
+
+\begin{figure}[H]
+    \centering
+     \includegraphics[width=0.9\textwidth, height=0.5\textheight]{/home/alma/Documentos/diseñoApp/Dclases.png}
+    \caption{imagen del diagrama de clases}
+    \label{fig:etiqueta}
+\end{figure}
+
+\subsection{Diagrama Entidad-Relacion}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth, height=0.5\textheight]{/home/alma/Documentos/diseñoApp/DER.png}
+    \caption{imagen del diagrama entidad-relacion}
+    \label{fig:etiqueta}
+\end{figure}
+
+\subsection{Diagrama Relacional}
+\begin{figure}[H]
+    \centering
+     \includegraphics[width=0.8\textwidth, height=0.5\textheight]{/home/alma/Documentos/diseñoApp/DR.png}
+    \caption{imagen del diagrama relacional}
+    \label{fig:etiqueta}
+\end{figure}
+
+\section{Plan de Pruebas}
+Se realizará un plan de pruebas para garantizar que el sistema cumpla con los requerimientos y criterios de aceptación establecidos en este documento. El plan de pruebas incluirá de unidad, integración y sistema, y se realizará antes de la implementación del sistema en el negocio. 
+
+\section{Conclusiones}
+
+El sistema LockerApp se destaca como una herramienta esencial para la gestión eficiente de lockers, ofreciendo una experiencia de usuario intuitiva y funcionalidades que simplifican las operaciones diarias. La simplicidad de su interfaz no compromete su potencial, ya que facilita tanto a los usuarios finales como a los administradores aprovechar al máximo sus capacidades. Se incluirá también el plan de pruebas para garantizar que el sistema logre con el objetivo.
+
+\begin{center}
+\begin{tabular}{|C{2cm}|C{2cm}|C{6cm}|C{5cm}|}
+    \hline
+    \textbf{Fecha} & \textbf{Versión} & \textbf{Descripción} & \textbf{Autores} \\
+    \hline
+    09/05/2023 & 1.0 & SRS & \begin{itemize}
+                                    \item Diaz Rios Fernanda
+                                    \item Aguilar Rios Hector Daniel
+                                    \item Dominguez Diaz Alma Juanita
+                                    \item Gutierrez Hernandez Kovin Zahit
+                                    \item Hernandez Muñoz Fernando Damian
+                                  \end{itemize} \\
+    \hline
+\end{tabular}
+\end{center}
+
+\vspace{1cm}
+Firma del cliente: \underline{\hspace{6cm}}
+
+\end{document}
+
